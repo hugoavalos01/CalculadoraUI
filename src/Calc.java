@@ -369,9 +369,14 @@ public class Calc {
 				}
 
 				else if (operation == "Fact") {
-					result = Double.valueOf(c.fact(num));
-					answer = String.format("%.2f", result);
-					textField.setText(answer);
+					if (num < 16) {
+						result = Double.valueOf(c.fact(num));
+						answer = String.format("%.2f", result);
+						textField.setText(answer);
+					} else {
+						textField.setText("Math Error");
+					}
+					
 				}
 
 				else if (operation == "Primo") {

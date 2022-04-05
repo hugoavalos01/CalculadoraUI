@@ -27,7 +27,7 @@ public class Calculadora {
 	public int fact(int n) {
 		int f = 1;
 		
-		if (n < 0) throw new RuntimeException(); 
+		if (n < 0 || n > 16) throw new RuntimeException(); 
 		
 		if (n == 0) {
 			f = 1;
